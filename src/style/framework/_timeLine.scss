@@ -1,0 +1,31 @@
+.relative {
+    // position: relative;
+}
+.timeLine {
+    border-left: 1px solid #ddd;
+    padding-left: 13px;
+    
+    li {
+        position: relative;
+        margin: 10px 0;
+        font-size: 13px;
+        .timeLine-radio {
+            visibility:hidden;
+        }
+        .circle {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: -17px;
+        }
+        .timeLine-font {
+            position: absolute;
+            top: -5.5px;
+            color: #9A9A9A
+        }
+    }
+}

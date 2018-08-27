@@ -1,0 +1,230 @@
+//- test.pug
+extends ../layout/main.pug
+
+append styles
+  link(rel="stylesheet", href="//at.alicdn.com/t/font_555036_qk7xbnwj6nyd5cdi.css")
+  link(rel="stylesheet", href="/css/page/profile.css")
+  link(rel="stylesheet", href="/css/page/test.css")
+
+block title
+  title 测试页面
+
+block content
+  .container.profile
+    form
+      .row
+        .col-sm-4
+          .form-group
+            label(for="username") 用户名
+            input(type="text", class="form-control", name="username", value="haima" readonly)
+        .col-sm-4
+          .form-group
+            label(for="email") 邮箱
+            input(type="email", class="form-control", name="email", value="523894318@qq.com" readonly)
+        .col-sm-4
+          .form-group
+            label(for="role") 角色
+            input(type="text", class="form-control", name="role", value="管理员" readonly)
+      .row
+        .col-sm-4
+          .form-group
+            label(for="phone") 联系电话
+            input(type="text", class="form-control", name="phone", value="13850144066")
+        .col-sm-4
+          .form-group
+            label(for="name") 姓名
+            input(type="text", class="form-control", name="name", value="小姐姐")
+        .col-sm-4
+          .form-group.has-feedback
+            label(for="name") 姓名
+            input(type="text", class="form-control", name="name", value="小姐姐")
+            i.iconfont.icon-rili.form-control-feedback
+    form
+      .row
+        .col-sm-4
+          .form-group
+            label(for="old-password") 原密码
+            input(type="password", class="form-control", name="old-password")
+        .col-sm-4
+          .form-group
+            label(for="new-password") 新密码
+            input(type="password", class="form-control", name="new-password")
+        .col-sm-4
+          .form-group.has-error
+            label(for="confirm-password") 二次确认
+            input(type="password", class="form-control", name="confirm-password" )
+            p.help-block
+              i.iconfont.icon-message
+              |  两次输入的密码不一致
+    hr
+    from.form-horizontal
+      .form-group
+        label.col-sm-2(for="dealer", class="control-label") 经销商
+        .col-sm-10
+          input(type="text" class="form-control", name="dealer", value="北京捷亚泰汽车贸易有限公司" readonly)
+      .form-group
+        label.col-sm-2(for="dealer", class="control-label") 活动类型
+        .col-sm-10
+          input(type="text" class="form-control", name="dealer", value="团购报名" readonly)
+      .form-group
+        label.col-sm-2(for="dealer", class="control-label") 副标题
+        .col-sm-10
+          textarea(class="form-control", name="dealer", readonly) 春节S5团购 活力无限 青春敢闯
+      .form-group
+        label.col-sm-2(for="dealer", class="control-label") 促销价
+        .col-sm-10
+          input(type="text" class="form-control", name="dealer", value="¥ 199.00" readonly)
+      .form-group
+        label.col-sm-2(for="dealer", class="control-label") 促销价
+        .col-sm-10
+          p(class="form-control-static") form-control-static test
+      .form-group
+        label.col-sm-2(for="dealer", class="control-label vm-label") 活动主图
+        .col-sm-10
+          img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg", class="form-control-static-img" alt="activity picture")
+      .form-group
+        label.col-sm-2(for="dealer", class="control-label required") 促销价
+        .col-sm-10
+          input(type="text" class="form-control", name="dealer", value="¥ 199.00")
+      .form-group.has-feedback
+        label.col-sm-2(for="dealer", class="control-label") 审核时间
+        .col-sm-10
+          input(type="text" class="form-control", name="dealer", value="2017.10.23 - 2017.11.24")
+        i.iconfont.icon-rili.form-control-feedback
+    hr
+    form.form-inline
+      .form-group
+        label.control-label 活动类型
+        select(name="activity" class="form-control")
+          option 请选择
+          option 活动1
+          option 活动2
+          option 活动3
+      .form-group
+        label.control-label 审核状态
+        select(name="activity" class="form-control")
+          option 请选择
+          option 通过
+          option 不通过
+      .form-group.has-feedback
+        label.control-label 审核时间
+        input(type="text" class="form-control", value="2017.10.23 - 2017.11.24")
+        i.iconfont.icon-rili.form-control-feedback
+      .form-group
+        label 经销商
+        input(type="text" class="form-control" value="北京xxx公司")
+    hr
+    form.form-inline
+      .form-group
+        label.control-label 活动标题
+        input(type="text" class="form-control")
+    hr
+    form.form-horizontal
+      .form-group
+        label(class="col-sm-3 control-label required") 编号
+        .col-sm-8
+          input(type="text" class="form-control")
+      .form-group
+        label(class="col-sm-3 control-label required") 车系名
+        .col-sm-8
+          input(type="text" class="form-control")
+      .form-group
+        label(class="col-sm-3 control-label required") 车辆主图
+        .col-sm-8
+          input(type="file")
+      .form-group
+        label(class="col-sm-3 control-label required") 核销有效期
+        .col-sm-2.col-md-2
+          .radio
+            label
+              input(type="radio" name="test-radio" checked)
+              | 有效天数
+          .radio
+            label
+              input(type="radio" name="test-radio")
+              | 固定日期
+        .col-sm-7
+          .form-group
+            label(class="col-sm-3 control-label") 有效时间
+            .col-sm-6
+              .input-group
+                input(type="text" class="form-control")
+                span(class="input-group-addon") 天
+            //- .col-sm-6
+            //-   input(type="text" class="form-control")
+            //- .col-sm-1
+            //-   | 天
+          .form-group.has-feedback
+            label(class="col-sm-3 control-label") 有效期至
+            .col-sm-6
+              input(type="text" class="form-control" readonly)
+              i.iconfont.icon-rili.form-control-feedback
+      .form-group
+        label(class="col-sm-3 control-label required") 是否支持积分抵扣
+        .col-sm-2.col-md-2
+          .checkbox
+            label
+              input(type="checkbox" name="test-radio" checked)
+              | 有效天数
+        .col-sm-7
+          .form-group
+            label(class="col-sm-3 control-label") 抵扣积分上限
+            .col-sm-6
+              input(type="text" class="form-control" readonly)
+    hr
+    .panel
+      .panel-heading
+        | 基本信息
+      .panel-body
+        form
+          .row
+            .col-sm-4
+              .form-group
+                label(for="username") 用户名
+                input(type="text", class="form-control", name="username", value="haima" readonly)
+            .col-sm-4
+              .form-group
+                label(for="email") 邮箱
+                input(type="email", class="form-control", name="email", value="523894318@qq.com" readonly)
+            .col-sm-4
+              .form-group
+                label(for="role") 角色
+                input(type="text", class="form-control", name="role", value="管理员" readonly)
+          .row
+            .col-sm-4
+              .form-group
+                label(for="phone") 联系电话
+                input(type="text", class="form-control", name="phone", value="13850144066")
+            .col-sm-4
+              .form-group
+                label(for="name") 姓名
+                input(type="text", class="form-control", name="name", value="小姐姐")
+          .row
+            .col-sm-4
+              button(type="button").btn.btn-big.btn-primary
+                | 保存
+    .panel
+      .panel-heading
+        | 更改密码
+      .panel-body
+        form
+          .row
+            .col-sm-4
+              .form-group
+                label(for="old-password") 原密码
+                input(type="password", class="form-control", name="old-password")
+            .col-sm-4
+              .form-group
+                label(for="new-password") 新密码
+                input(type="password", class="form-control", name="new-password")
+            .col-sm-4
+              .form-group.has-error
+                label(for="confirm-password") 二次确认
+                input(type="password", class="form-control", name="confirm-password" )
+                p.help-block
+                  i.iconfont.icon-message
+                  |  两次输入的密码不一致
+          .row
+            .col-sm-4
+              button(type="button").btn.btn-big.btn-primary
+                | 保存

@@ -1,0 +1,84 @@
+//- audit.pug
+extends ../../../layout/index-main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 审核管理-活动审核
+
+block content-body
+  .audit-detail
+    ol(class='breadcrumb')
+      li
+        a 首页
+      li
+        a 审批管理
+      li.active
+        | 审批详情
+    .panel
+      .panel-body.with-state
+        ul.state-card.state-danger
+          li.state 审核不通过
+          li.reason
+            span 原因：
+            span 图片不清晰
+          li.time
+            span 审核时间：
+            span 2017-10-24 12:30:40
+          li.admin
+            span 管理员：
+            span 彭于晏
+    .panels
+      .panel
+        .panel-heading 基本信息
+        .panel-body
+          form.form-horizontal
+            .form-group
+              label.col-md-1.control-label 经销商
+              .col-md-6.col-lg-4
+                input.form-control(value="北京捷亚泰汽车贸易有限公司" readonly)
+            .form-group
+              label.col-md-1.control-label 活动类型
+              .col-md-6.col-lg-4
+                input.form-control(value="团购报名" readonly)
+            .form-group
+              label.col-md-1.control-label 活动标题
+              .col-md-6.col-lg-4
+                input.form-control(value="春节S5团购 活力无限 青春敢闯" readonly)
+            .form-group
+              label.col-md-1.control-label 副标题
+              .col-md-6.col-lg-4
+                textarea.form-control(rows="3" readonly) 春节S5团购 活力无限 青春敢闯
+            .form-group
+              label.col-md-1.control-label 活动时间
+              .col-md-6.col-lg-4
+                input.form-control(value="2017-10-01 至 2017-11-20" readonly)
+            .form-group
+              label.col-md-1.control-label 使用区域
+              .col-md-6.col-lg-4
+                input.form-control(value="华南地区（上海、浙江、江西、福建）山西、呼和浩特" readonly)
+            .form-group
+              label.col-md-1.control-label 原价
+              .col-md-6.col-lg-4
+                input.form-control(value="¥ 299.00" readonly)
+            .form-group
+              label.col-md-1.control-label 促销价
+              .col-md-6.col-lg-4
+                input.form-control(value="¥ 199.00" readonly)
+            .form-group
+              label.col-md-1(for="dealer", class="control-label vm-label") 活动主图
+              .col-md-7.col-lg-5
+                img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg", class="form-control-static-img" alt="activity picture")
+      .panel
+        .panel-heading 活动内容
+        .panel-body
+          .panel-jumbotron
+            p.text
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt quisquam labore, vitae, veritatis nihil reiciendis expedita facere aut rerum tenetur, quasi voluptatem veniam itaque ea excepturi. Exercitationem deserunt itaque non, odit nihil asperiores tenetur quasi officia quos velit reprehenderit. Sed dolores quos, nemo numquam tempore voluptatem rem obcaecati assumenda.
+            img.poster(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113908ngsgqzgvvvnq4pv1.jpg" alt="beauty")
+            p.text
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo officia reprehenderit, nihil architecto eius ipsum totam corrupti ab perferendis ipsam maiores quidem non laboriosam ex libero quisquam impedit, esse rerum debitis dolorum saepe. Mollitia numquam debitis omnis qui asperiores perferendis ratione incidunt ab quas commodi quis tempora maiores sapiente sed possimus pariatur quia nihil, nulla culpa quisquam eligendi iste recusandae rerum? Suscipit cumque nesciunt ipsa provident accusamus fugit commodi, libero ipsam velit rerum, sit inventore amet! Exercitationem, id? Consequuntur, aspernatur voluptas nesciunt accusantium dolorum, cupiditate facilis architecto vero minima recusandae voluptatem? Eos, temporibus distinctio dolorum incidunt odio doloribus praesentium explicabo?
+          .submit-bar
+            button.btn.btn-default.btn-big 审核不通过
+            button.btn.btn-primary.btn-big 审核通过

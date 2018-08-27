@@ -1,0 +1,16 @@
+//- 确认弹出框
+extends ../../layout/main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 查看大图
+
+block content
+  .mask
+    .dialog
+      .img-wrapper
+        div
+          i.iconfont.icon-Popupwindow-copy
+        img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg", alt="")

@@ -1,0 +1,93 @@
+.page-box {
+    text-align: center;
+    .page-size {
+        display: inline-block;
+        .iconfont {
+            font-size: 6px;
+            color: #bbb;
+        }
+        .page-size-item {
+            display: inline;
+            width:28px;
+            height:28px;
+            line-height: 28px;
+            color: #666;
+            border: 1px solid #ddd;
+            border-radius: 4px ;
+            text-align: center;
+            display: inline-block; 
+            margin-right: 8px;
+            font-size: 12px;
+            cursor: pointer;
+            a {
+                color: #666;
+                display: inline-block; 
+            }
+        }
+        .page-size-item:hover {
+            border: 1px solid #FF8C00;
+            color: #ff8c00;
+            a {
+                color: #ff8c00;
+            }
+        }
+        .active {
+            background: #FF8C00;
+            color: #fff;
+            border: 1px solid #FF8C00;
+            a {
+                color: #fff;
+            }
+        }
+        .active:hover {
+            background-color : #FF8C00;
+            color: #fff;
+            border: 1px solid #FF8C00;
+            a { 
+                color: #fff;
+            }
+        }
+        .page-size-more {
+            display: inline-block;
+            position: relative;
+            width: 17px;
+            height: 20px;
+            line-height: 20px;
+            >a {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                color: #ccc;
+            }
+        }
+    }
+    .page-num {
+        display: inline-block;
+        >input {
+            width:48px;
+            height:28px;
+            border: 1px solid #ddd;
+            border-radius: 4px ;
+            padding: 0 5px;
+            &:focus {
+                outline: none;
+                border-color: #ff8c00;
+                box-shadow: 0 0 1px #ff8c00;
+            } 
+        }
+        span {
+            margin-left: 6px;
+        }
+    }
+    .skip {
+        width: 48px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 4px ; 
+        color: #666;
+        display: inline-block;
+        margin-left: 12px;
+    }
+}

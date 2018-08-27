@@ -1,0 +1,24 @@
+.breadcrumb {
+  padding: 20px 0;
+  li {
+    float: left;
+    font-size: $breadcrumb-size;
+    a {
+      color: $breadcrumb-color;
+    }
+  }
+  li + li:before {
+    color: $breadcrumb-color;
+    content: "/";
+    padding: 0 11px;
+  }
+  li.active {
+    color: $breadcrumb-active;
+  }
+}
+.breadcrumb::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+

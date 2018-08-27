@@ -1,0 +1,190 @@
+//- audit.pug
+extends ../../../layout/index-main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 审核管理-活动审核
+
+block content-body
+  .audit
+    ol(class='breadcrumb')
+      li
+        a(href='javascript:;') 首页
+      li.active
+        | 审核管理
+    div(class='admin-children pb34')
+      ul(class='navitems clearfix')
+        li(class='nav-item active')
+          a(href='../activity/index.html') 活动审核
+        li(class='nav-item')
+          a(href='../information/index.html') 资讯审核
+        li(class='nav-item')
+          a(href='../sencondary/index.html') 二级网点审核
+        li(class='nav-item')
+          a(href='../identification/list.html') 认证审核
+      .search-qute
+        form.form-inline
+          .form-group
+            label.control-label 活动类型
+            select(name="activity" class="form-control")
+              option 请选择
+              option 活动1
+              option 活动2
+              option 活动3
+          .form-group
+            label.control-label 审核状态
+            select(name="activity" class="form-control")
+              option 请选择
+              option 通过
+              option 不通过
+          .form-group.has-feedback
+            label.control-label 审核时间
+            input(type="text" class="form-control", value="2017.10.23 - 2017.11.24")
+            i.iconfont.icon-rili.form-control-feedback
+          .form-group
+            label 经销商
+            input(type="text" class="form-control" value="北京xxx公司")
+        form.form-inline
+          .form-group
+            label.control-label 活动标题
+            input(type="text" class="form-control")
+          .search.fr
+            button(type="button").btn.btn-sm.btn-default 清空条件
+            button(type="button").btn.btn-sm.btn-primary 搜索
+      .fake
+        .hr
+      div(class='list-addBox clearfix')
+        a(class='btn btn-mid btn-default btn-export fr', href='javascript:;') 导出
+      div(class='plr20')
+        div(class='table-responsive table-bordered ')
+          table(class="table table-hover")
+            thead
+              tr
+                th 序号
+                th 活动类型
+                th 活动名称
+                th 经销商
+                th 审核状态
+                th 发布时间
+                th 审核人
+                th 审核时间
+                th 操作
+            tbody
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='detail.html') 查看
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='javascript:;') 查看
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='javascript:;') 查看
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='javascript:;') 查看
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='javascript:;') 查看
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='javascript:;') 查看
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='javascript:;') 查看
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='javascript:;') 查看
+              tr
+                td 1101234
+                td 活动报名
+                td 一元试驾，活动有礼
+                td 东莞市新大地汽车贸易有限公司
+                td 待审核
+                td 2017-11-12 12:09:09
+                td 海马客服01
+                td 2017-11-12 12:09:09
+                td
+                  a(class='upd-item', href='javascript:;') 查看
+      div(class='page-box mt34')
+        ul(class='page-size')
+          li(class='page-size-item iconfont icon-left') &nbsp;
+          li(class='page-size-item active') 1
+          li(class='page-size-item') 2
+          li(class='page-size-item') 3
+          li(class='page-size-item') 4
+          li(class='page-size-item') 5
+          li(class='page-size-item') 6
+          li(class='page-size-item') 7
+          li(class='page-size-more')
+            a(href='javascript:;') ...
+          li(class='page-size-item') 10
+          li(class='page-size-item iconfont icon-right') &nbsp;
+          p(class='page-num') 到第
+            input(type='text')
+            span 页

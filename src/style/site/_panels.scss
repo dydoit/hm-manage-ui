@@ -1,0 +1,145 @@
+@import "../framework/mixins/border-radius";
+
+.panels {
+  border-radius: 2px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, .12);
+
+  .panel {
+    margin-bottom: 0;
+    box-shadow: none;
+
+    &:first-child {
+      @include border-bottom-radius(0);
+    }
+
+    &:last-child {
+      @include border-top-radius(0);
+    }
+  }
+
+  .tooltips {
+    margin-top: 8px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .preview {
+    position: relative;
+    display: inline-block;
+    width: 155px;
+    height: 232px;
+    margin-right: 35px;
+    margin-bottom: 35px;
+    padding: 5px 10px 14px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 13px;
+
+    img.pic {
+      width: 100%;
+      height: 80%;
+    }
+
+    p.name {
+      color: #333;
+      line-height: 18px;
+      margin-bottom: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    p.text {
+      span {
+        color: #ff7a00;
+        font-weight: bold;
+      }
+
+      del {
+        color: #ddd;
+        font-size: 12px;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: -9px;
+      right: -9px;
+      width: 18px;
+      height: 18px;
+      border-radius: 9px;
+      background-color: #bcbcbc;
+      color: #fff;
+      cursor: pointer;
+
+      i {
+        font-size: 8px;
+      }
+    }
+
+    .deleted {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .4);
+
+      p.deleted-text {
+        line-height: 232px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.panel {
+  .with-state {
+    padding-top: 18px;
+    padding-bottom: 25px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .submit-bar {
+    margin-top: 45px;
+    text-align: center;
+
+    button {
+      margin-right: 37px;
+    }
+  }
+
+  .panel-jumbotron {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 18px 22px 44px;
+    border-radius: $border-radius-base;
+    background-color: $body-bg;
+
+    @media (max-width: $screen-md-min) {
+      width: 100%;
+    }
+
+    .text {
+      font-size: 14px;
+      line-height: 25px;
+      margin-bottom: 20px;
+
+      &:last-child {
+        padding-top: 24px;
+      }
+    }
+
+    .poster {
+      width: 100%;
+    }
+  }
+
+  .state-card {
+    margin-left: 30px;
+  }
+}

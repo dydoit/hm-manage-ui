@@ -1,0 +1,189 @@
+//- audit.pug
+extends ../../layout/main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+  link(rel="stylesheet", href="/css/page/order.css")
+
+
+block title
+  title 订单管理
+
+block content
+  include ../../component/header.pug
+  - var classes = ['main'];
+  div(class=classes)
+    include ../../component/sidebar.pug
+    .content
+      .content-body
+          ol(class='breadcrumb')
+            li
+              a(href='javascript:;') 首页
+            li(class='active') 订单管理
+          div(class='admin-children pb34')
+            ul(class='navitems clearfix')
+              li(class='nav-item active')
+                a(href='javascript:;') 全部
+              li(class='nav-item')
+                a(href='javascript:;') 新车
+              li(class='nav-item')
+                a(href='javascript:;') 售前精品
+              li(class='nav-item')
+                a(href='javascript:;') 售后精品
+              li(class='nav-item')
+                a(href='javascript:;') 配件
+              li(class='nav-item')
+                a(href='javascript:;') 代金券
+              li(class='nav-item')
+                a(href='javascript:;') 积分
+            .search-qute
+              form.form-inline
+                .form-group
+                  label.control-label 活动类型
+                  select(name="activity" class="form-control")
+                    option 请选择
+                    option 活动1
+                    option 活动2
+                    option 活动3
+                .form-group
+                  label.control-label 审核状态
+                  select(name="activity" class="form-control")
+                    option 请选择
+                    option 通过
+                    option 不通过
+                .form-group.has-feedback
+                  label.control-label 审核时间
+                  input(type="text" class="form-control", value="2017.10.23 - 2017.11.24")
+                  i.iconfont.icon-rili.form-control-feedback
+                .form-group
+                  label 经销商
+                  input(type="text" class="form-control" value="北京xxx公司")
+              form.form-inline
+                .form-group
+                  label.control-label 活动标题
+                  input(type="text" class="form-control")
+                .search.fr
+                  button(type="button").btn.btn-sm.btn-default 清空条件
+                  button(type="button").btn.btn-sm.btn-primary 搜索
+            .fake
+              .hr
+            div(class='list-addBox clearfix')
+              ul(class='nav-pills')
+                li.active
+                  a(href='javascript:;') 全部
+                li
+                  a(href='javascript:;') 待付款
+                li
+                  a(href='javascript:;') 已付款
+                li
+                  a(href='javascript:;') 已发货
+                li
+                  a(href='javascript:;') 交易完成
+                li
+                  a(href='javascript:;') 退款中
+                li
+                  a(href='javascript:;') 已退款
+                li
+                  a(href='javascript:;') 关闭
+              a(class='btn btn-mid btn-default btn-export fr', href='javascript:;') 导出
+            div(class='plr20')
+              div(class='persViewBox orderBox')
+                ul.tab-header
+                  li.tab-width 订单信息
+                  li.tab-info 收件人信息
+                  li.price 实付款
+                  li.after-sale 状态
+                  li.operation 操作
+                div(class='persViewCon table-bordered mt21 pb12')
+                  div.order-table-header
+                    span 订单号：329560398643948597
+                    span.ml135 下单时间：2017.10.24
+                  .order-padding  
+                    table.table-view.table-bordered.order-padding
+                      tbody
+                        tr
+                          th(class='oInfo order-onInfo' colspan='5' )
+                            span 订单号：329560398643948597
+                            span.ml135 下单时间：2017.10.24
+                        tr
+                          td.table2
+                            table.table-view2 
+                              tbody
+                                tr
+                                  td.aOrder-items
+                                    a(href='javascript:;' class='aImg')
+                                      img(src='')
+                                  td
+                                    a(href='javascript:;' class='view-info')
+                                      p 全包邮皮革脚垫
+                                      p(class='view-font mt5') 车型：海马s5
+                                      p.view-font 颜色：黑色
+                                  td.amount x1
+                                  td.bdrGray ¥1900
+                          td.table-info
+                            p 彭于晏
+                            p 13850141236
+                          td.table-price.orange ¥1900
+                          td.after-sale
+                            p.orange 退款中
+                            p.gray 退货并退款
+                          td.operation
+                            a(href='javascript:;') 订单详情
+                        tr
+                          td.table2
+                            table.table-view2
+                              tbody
+                                tr
+                                  td.aOrder-items
+                                    a(href='javascript:;' class='aImg')
+                                      img(src='')
+                                  td
+                                    a(href='javascript:;' class='view-info')
+                                      p 全包邮皮革脚垫
+                                      p(class='view-font mt5') 车型：海马s5
+                                      p.view-font 颜色：黑色
+                                  td.amount x1
+                                  td.bdrGray ¥1900
+                          td.table-info
+                            p 彭于晏
+                            p 13850141236
+                          td.table-price.orange ¥1900
+                          td.after-sale
+                            p.orange 退款中
+                            p.gray 退货并退款
+                          td.operation
+                            a(href='javascript:;') 订单详情
+                  .order-padding  
+                    table.table-view.table-bordered.order-padding
+                      tbody
+                        tr
+                          th(class='oInfo order-onInfo' colspan='5' )
+                            span 订单号：329560398643948597
+                            span.ml135 下单时间：2017.10.24
+                        tr
+                          td.table2
+                            table.table-view2
+                              tbody
+                                tr
+                                  td.aOrder-items
+                                    a(href='javascript:;' class='aImg')
+                                      img(src='')
+                                  td
+                                    a(href='javascript:;' class='view-info')
+                                      p 全包邮皮革脚垫
+                                      p(class='view-font mt5') 车型：海马s5
+                                      p.view-font 颜色：黑色
+                                  td.amount x1
+                                  td.bdrGray ¥1900
+                          td.table-info
+                            p 彭于晏
+                            p 13850141236
+                          td.table-price.orange ¥1900
+                          td.after-sale
+                            p.orange 退款中
+                            p.gray 退货并退款
+                          td.operation
+                            a(href='javascript:;') 订单详情
+                      
+            include ../../component/page.pug
+      include ../../component/footer.pug

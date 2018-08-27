@@ -1,0 +1,32 @@
+//- 修改角色弹出框
+extends ../../layout/main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 修改角色弹出框
+
+block content
+  .mask
+    .dialog
+      .closed
+        a(href="javascript:;")
+          img(src="../../assets/images/close.png", alt="")
+        //- 待按钮的提示信息
+      h4  修改角色
+      .modify-wrapper
+        .form-horizontal
+          .form-group
+            lable.control-label.col-sm-4 角色名
+            input(type="text" class="form-control col-sm-7")
+          .form-group
+            lable.control-label.col-sm-4 角色描述
+            textarea(class="col-sm-7  form-control" rows="14" maxlength="200")
+            div.num
+              span  0
+              span  /
+              span  200
+      .select-group
+        a(class="btn btn-default btn-mid",href="javascript:;") 取消
+        a(class="btn btn-primary btn-mid",href="javascript:;") 保存

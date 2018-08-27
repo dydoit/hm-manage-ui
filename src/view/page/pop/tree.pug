@@ -1,0 +1,63 @@
+//- 树形弹出框
+extends ../../layout/main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 树形弹出框
+
+block content
+  .mask
+    .dialog.dialog-list
+      .closed
+        a(href="javascript:;")
+          img(src="../../assets/images/close.png", alt="")
+        //- 待按钮的提示信息
+      h4  权限分配
+      div.tree-wrapper
+        dl
+          dt
+            div
+              input(type="checkbox")
+              label(class="iconfont icon-checkbox")
+              span  首页
+        dl
+          dt
+            div
+              input(type="checkbox")
+              label(class="iconfont icon-checkbox")
+              span  账号管理
+          dd
+            dl
+              dt
+                div
+                  input(type="checkbox")
+                  label(class="iconfont icon-checkbox")
+                  span  角色管理
+              dd
+                ul.list-manage
+                  li
+                    div
+                      input(type="checkbox")
+                      label(class="iconfont icon-checkbox")
+                      span  新增
+                    div
+                      input(type="checkbox")
+                      label(class="iconfont icon-checkbox")
+                      span  修改
+                  li
+                    div
+                      input(type="checkbox")
+                      label(class="iconfont icon-checkbox")
+                      span  删除
+                    div
+                      input(type="checkbox")
+                      label(class="iconfont icon-checkbox")
+                      span  分配权限
+            dl
+              dt
+                div
+                  input(type="checkbox")
+                  label(class="iconfont icon-checkbox")
+                  span  用户管理

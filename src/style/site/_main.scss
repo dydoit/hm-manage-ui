@@ -1,0 +1,70 @@
+//间距
+.pt7 {
+  padding-top: 7px;
+}
+.pt12 {
+  padding-top: 12px;
+}
+.pb12 {
+  padding-bottom: 12px;
+}
+.pb34 {
+  padding-bottom: 34px;
+}
+.plr20 {
+  padding: 0 20px;
+}
+.plr30 {
+  padding: 0 30px;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.mt18 {
+  margin-top: 18px;
+}
+.mt21 {
+  margin-top: 21px;
+}
+.mt34 {
+  margin-top: 34px;
+}
+.ml110 {
+  margin-left: 110px;
+}
+.ml135 {
+  margin-left: 135px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.mr14 {
+  margin-right: 14px;
+}
+//右边内容
+.main {
+    height:calc(100% - 55px);
+    .list-addBox {
+      padding:20px;
+    }
+}
+.admin-body {
+  padding:0 30px 36px 30px;
+}
+//白色背景+阴影
+.admin-children {
+  background: #fff;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.12);
+}
+/*右侧主体样式*/
+.content {
+    float:left;
+    width:calc(100% - 200px);
+    height:100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.content-body {
+    min-height: calc(100% - 85px);
+    padding: 0 14px;
+}

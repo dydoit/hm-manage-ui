@@ -1,0 +1,71 @@
+$sidebarBg:#000;
+/*左侧栏*/
+.sidebar {
+    position: relative;
+    float:left;
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    background: $sidebarBg;
+    box-shadow: 0 1px 14px 0 rgba(0,0,0,.12);
+    >ul {
+      padding-top:15px;
+      >li {
+        position: relative;
+        a {
+          display: block;
+          padding-left: 57px;
+          margin-bottom:8px;
+          height:38px;
+          line-height: 38px;
+
+          color:#fff;
+          font-size:14px;
+          &.active {
+            background:#31373E;
+            color:$brand-primary;
+            border-right:4px solid $brand-primary;
+          }
+          >.iconfont {
+            position: absolute;
+            left:30px;
+            font-size:14px;
+          }
+
+        }
+
+        &.list {
+          >a {
+            border-right:4px solid transparent;
+            background: url('../../assets/images/slidebar-01.png') no-repeat right center;
+            &.unfold {
+              background: url('../../assets/images/slidebar-02.png') no-repeat right center;
+            }
+          }
+          li {
+            a {
+              padding-left:62px;
+              margin-bottom:0;
+              font-size: 13px;
+            }
+            a.active {
+              background:#31373E;
+              color:$brand-primary;
+              border-right:4px solid $brand-primary;
+            }
+          }
+        }
+      }
+    }
+}
+//滚动条样式
+.iScrollLoneScrollbar{
+  position: absolute;
+  right:6px !important;
+  >div {
+    background-color: rgba(255,255,255,.2) !important;
+    border:none !important;
+
+  }
+
+}

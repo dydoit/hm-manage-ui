@@ -1,0 +1,115 @@
+//- audit.pug
+extends ../../layout/main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+  link(rel="stylesheet", href="/css/page/order.css")
+
+
+block title
+  title 订单管理
+
+block content
+  include ../../component/header.pug
+  - var classes = ['main'];
+  div(class=classes)
+    include ../../component/sidebar.pug
+    .content
+      .content-body
+          ol(class='breadcrumb')
+            li
+              a(href='javascript:;') 首页
+            li(class='active') 商品管理
+          div(class='admin-children pb34')
+            .search-qute.pt7
+              form.form-inline
+                .form-group
+                  label.control-label 活动类型
+                  select(name="activity" class="form-control")
+                    option 请选择
+                    option 活动1
+                    option 活动2
+                    option 活动3
+                .form-group
+                  label.control-label 审核状态
+                  select(name="activity" class="form-control")
+                    option 请选择
+                    option 通过
+                    option 不通过
+                .form-group.has-feedback
+                  label.control-label 审核时间
+                  input(type="text" class="form-control", value="2017.10.23 - 2017.11.24")
+                  i.iconfont.icon-rili.form-control-feedback
+                .form-group
+                  label 经销商
+                  input(type="text" class="form-control" value="北京xxx公司")
+              form.form-inline
+                .form-group
+                  label.control-label 活动标题
+                  input(type="text" class="form-control")
+                .search.fr
+                  button(type="button").btn.btn-sm.btn-default 清空条件
+                  button(type="button").btn.btn-sm.btn-primary 搜索
+            .fake
+              .hr
+            div(class='list-addBox clearfix fr')
+              a(class='btn btn-mid btn-default btn-export mr14', href='/page/product/create_b2c.html') 创建B2C商品
+              a(class='btn btn-mid btn-default btn-export mr14', href='/page/product/create_o2o.html') 创建O2O商品
+              a(class='btn btn-mid btn-default btn-export mr14', href='javascript:;') 批量删除
+              a(class='btn btn-mid btn-default btn-export mr14', href='javascript:;') 批量上架
+              a(class='btn btn-mid btn-default btn-export ', href='javascript:;') 批量下架
+            div(class='plr20')
+              div(class='table-responsive table-bordered ')
+                table(class="table table-hover")
+                  thead
+                    tr
+                      th
+                        i.icon-check
+                      th 商品图片
+                      th 商品编号
+                      th 商品名称
+                      th 商品类型
+                      th 商品库存
+                      th 商品金额
+                      th 商品类目
+                      th 商品状态
+                      th 操作
+                  tbody
+                    tr
+                      td
+                        i.icon-check
+                      td
+                        img.picture
+                      td 活动报名
+                      td 一元试驾，活动有礼
+                      td 东莞市新大地汽车贸易有限公司
+                      td 24
+                        span.mark 低
+                      td 2017-11-12 12:09:09
+                      td 海马客服01
+                      td 2017-11-12 12:09:09
+                      td
+                        a(class='upd-item', href='javascript:;') 下架
+                    tr
+                      td
+                        i.icon-check
+                      td
+                        img.picture
+                      td 活动报名
+                      td 一元试驾，活动有礼
+                      td 东莞市新大地汽车贸易有限公司
+                      td 24
+                        span.mark 低
+                      td 2017-11-12 12:09:09
+                      td 海马客服01
+                      td 2017-11-12 12:09:09
+                      td
+                        a(class='upd-item mr10', href='javascript:;') 编辑
+                        a(class='upd-item mr10', href='javascript:;') 删除
+                        a(class='upd-item mr10', href='javascript:;') 上架
+
+            include ../../component/page.pug
+      include ../../component/footer.pug
+
+append scripts
+  script(src="/js/profile.js")

@@ -1,0 +1,358 @@
+/*模态框基本样式*/
+.ml30{
+  margin-left:30px;
+}
+.mask {
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  text-align: center;
+  background-color: rgba(200,200,200,.4);
+  &:after{
+    content:'';
+    display:inline-block;
+    height:100%;
+    vertical-align: middle;
+  }
+  .dialog {
+    display: inline-block;
+    min-width:300px;
+    min-height:174px;
+    vertical-align: middle;
+    padding-top:8px;
+    border-radius:8px;
+    background-color: #fff;
+    h4 {
+      padding-left:20px;
+      margin-top:-10px;
+      margin-bottom:28px;
+      text-align: left;
+    }
+    h4,strong {
+      font-family: $font-family-medium;
+      font-size: 14px;
+      color:#333;
+    }
+    p {
+      margin-bottom: 4px;
+      line-height:22px;
+      color:#aaa;
+      font-size:13px;
+    }
+    .select-group {
+      margin:24px 24px 30px;
+      font-size:0;
+      a+a {
+        margin-left:25px;
+      }
+
+    }
+    .closed {
+      text-align: right;
+      a {
+        border:5px solid transparent;
+        margin-right: 5px;
+      }
+      img {
+        width:11px;
+      }
+    }
+    .hint {
+      margin:30px 0;
+    }
+  }
+}
+.dialog-list {
+  min-width:400px;
+  height:auto;
+  padding-bottom:30px;
+  font-size:13px;
+  color:#666;
+  text-align: left;
+  .form-wrapper {
+      max-width:740px;
+      padding: 0 30px;
+  }
+}
+/*测试树*/
+.tree-wrapper {
+  padding-left:20px;
+  input {
+    position: absolute;
+    margin-left:1px;
+    margin-bottom:1px;
+    opacity: 0;
+    z-index:1;
+    &+label {
+      position: absolute;
+      border:1px solid #ddd;
+      width:14px;
+      height:14px;
+      margin-bottom:0;
+      margin-top:2px;
+      font-size:0;
+      border-radius:2px;
+      color:#fff;
+      cursor:pointer;
+      background-color: #fff;
+    }
+    &:checked + label {
+      color:#ff8c00;
+      font-size:20px;
+      margin-left:-3px;
+      margin-top:-2px;
+      border:none;
+    }
+  }
+  span{
+    margin-left:20px;
+  }
+
+  dl{
+    margin:0;
+    padding:0;
+    >dt {
+      margin-bottom:12px;
+    }
+    >dd {
+      border-left:1px solid #ddd;
+      margin-left:6px;
+      >dl{
+        margin-bottom:20px;
+        >dt {
+          border-bottom:1px solid #ccc;
+          padding-left:28px;
+          margin-bottom:18px;
+          >div{
+            margin-bottom:-8px;
+            padding-left:10px;
+            background-color: #fff;
+          }
+        }
+        >dd {
+          margin-left:44px;
+          //权限管理页面
+          >ul.list-manage{
+            margin-bottom:50px;
+            margin-top:16px;
+            &:after {
+              content:'';
+              display:table;
+              clear:both;
+            }
+            >li {
+              &:first-child{
+                float:left;
+                border-bottom:1px solid #ddd;
+              }
+              &:last-child {
+                position:absolute;
+                margin-top:24px;
+              }
+              >div {
+                float:left;
+                margin-bottom:-8px;
+                padding-left:10px;
+                margin-left:20px;
+                background-color: #fff;
+                &:nth-child(2n){
+                  margin-left:0;
+                }
+              }
+            }
+          }
+
+
+
+          >dl>dd li{
+            border-bottom:1px solid #ddd;
+            padding-left:20px;
+            margin-bottom:20px;
+            div {
+              margin-bottom:-8px;
+              padding-left:10px;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*选择商品表单盒子*/
+.form-wrapper {
+  >form{
+    border-bottom:2px solid #ddd;
+  }
+
+  .form-group {
+    margin-bottom:20px;
+  }
+  .form-trade-1 {
+    width:150px;
+    margin-left:10px;
+  }
+  .form-trade-2 {
+    width:200px;
+  }
+  .label-trade {
+    margin:0 10px 0 0;
+  }
+  .btn {
+    float:right;
+  }
+}
+// 商品列表
+.dialog-list{
+  .trade-list {
+    padding: 26px 30px 0;
+    overflow:hidden;
+    margin-left:-20px;
+    li {
+      float:left;
+      width:155px;
+      height:232px;
+      margin-left:20px;
+      text-align:center;
+      border:1px solid #ddd;
+      &:hover {
+        border-color:#FF8C00;
+      }
+      >div {
+        display: inline-block;
+        width:100%;
+        height:160px;
+        line-height:160px;
+        vertical-align: top;
+        img {
+          max-width: 130px;
+          vertical-align: middle;
+        }
+      }
+      p {
+        font-size:13px;
+        line-height:18px;
+        color:#333;
+        strong {
+          color:#FF7A00;
+        }
+        del {
+          margin-left:6px;
+          font-size:12px;
+          color:#ddd;
+        }
+      }
+    }
+  }
+}
+//选择车系
+.choose-wrapper {
+  padding-left:40px;
+  margin-bottom:30px;
+  text-align:left;
+  >div{
+    display:inline-block;
+    margin-right:20px;
+    input {
+      position:absolute;
+      z-index:1;
+      margin-left:-15px;
+      opacity: 0;
+      & + lable {
+        position:absolute;
+        margin-left:-16px;
+        margin-top:1.3px;
+        font-size:0;
+        width:15px;
+        height:15px;
+        border:1px solid #ddd;
+        border-radius:2px;
+        color:#fff;
+        cursor:pointer;
+        background-color: #fff;
+        &:hover{
+          border-color:red;
+        }
+      }
+      &:checked + lable {
+        color:#ff8c00;
+        font-size:20px;
+        margin-left:-18px;
+        margin-top:-3px;
+        border:none;
+      }
+    }
+    span {
+      margin-left:6px;
+      margin-right:30px;
+    }
+  }
+}
+//修改角色
+.modify-wrapper {
+  width:389px;
+  lable {
+    margin-left:-10px;
+  }
+  .form-group{
+    position: relative;
+  }
+  lable:after {
+    content:'*';
+    display:inline;
+    vertical-align:middle;
+    margin-left:3px;
+    color:#E55D6D;
+  }
+  .num {
+    position:absolute;
+    right:56px;
+    bottom:16px;
+    font-size:12px;
+    color:#aaa;
+  }
+}
+// 查看大图模式
+.img-wrapper {
+  font-size:0;
+  margin-top:-8px;
+  position: relative;
+  img {
+    max-width: 800px;
+  }
+  >div {
+    position: absolute;
+    top:10px;
+    right:10px;
+    width:18px;
+    height:18px;
+    line-height: 18px;
+    border-radius:50%;
+    background-color: #bcbcbc;
+    text-align: center;
+    color:#fff;
+    cursor: pointer;
+  }
+}

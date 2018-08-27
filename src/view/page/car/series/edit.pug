@@ -1,0 +1,356 @@
+//- car-series-edit.pug
+extends ../../../layout/index-main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 车辆管理-编辑车系
+
+block content-body
+  .car
+    ol(class='breadcrumb')
+      li
+        a 首页
+      li
+        a 车辆管理
+      li.active
+        | 车系管理
+    .panels
+      .panel
+        .panel-heading 基本信息
+        .panel-body
+          form.form-horizontal
+            .form-group
+              label.col-md-1.control-label.required
+                span 编号
+              .col-md-6.col-lg-4
+                input.form-control(value="S5111")
+            .form-group
+              label.col-md-1.control-label.required
+                span 车系名
+              .col-md-6.col-lg-4
+                input.form-control(value="海马S5")
+            .form-group
+              label.col-md-1.control-label.required
+                span 定金 (元)
+              .col-md-6.col-lg-4
+                input.form-control(value="2000")
+            .form-group
+              label.col-md-1.control-label
+                span 优惠后定金 (元)
+              .col-md-6.col-lg-4
+                input.form-control(value="1000")
+            .form-group.no-mb
+              label.col-md-1.control-label.required
+                span 车辆主图
+              .col-md-11
+                .preview-edit
+                  img.edit-picture(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113909ilyykz8lribwa54y.jpg" alt="edit-picture")
+                  .close
+                    i.iconfont.icon-Popupwindow-copy
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+            .form-group.no-mb
+              label.col-md-1.control-label.required
+                span 车辆视频
+              .col-md-11
+                .preview-edit
+                  img.edit-picture(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113909ilyykz8lribwa54y.jpg" alt="edit-picture")
+                  .close
+                    i.iconfont.icon-Popupwindow-copy
+                .preview-edit
+                  img.edit-picture(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113909ilyykz8lribwa54y.jpg" alt="edit-picture")
+                  .close
+                    i.iconfont.icon-Popupwindow-copy
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+            .form-group
+              label.col-md-1.control-label.required
+                span 车辆副标题
+              .col-md-6.col-lg-4
+                textarea.form-control(rows="4" placeholder="请在此输入对车辆的导购语")
+            .form-group.no-mb
+              label.col-md-1.control-label.required
+                span 核销有效期
+              .col-md-6.col-lg-4
+                .col-md-3.radio.radio-m.checked.no-pl
+                  label
+                    input(type="radio" name="test-radio" checked)
+                    | 有效天数
+                .col-md-9.form-group
+                  label(class="col-sm-5 control-label") 有效时间
+                  .col-sm-7
+                    .input-group
+                      input(type="text" class="form-control" value="30")
+                      span(class="input-group-addon") 天
+            .form-group
+              label.col-md-1.control-label
+              .col-md-6.col-lg-4
+                .col-md-3.radio.radio-m.no-pl
+                  label
+                    input(type="radio" name="test-radio")
+                    | 固定日期
+                .col-md-9.form-group.has-feedback
+                  label(class="col-sm-5 control-label") 有效期至
+                  .col-sm-7
+                    input(type="text" class="form-control" value="2018/12/31" readonly)
+                    i.iconfont.icon-rili.form-control-feedback
+            .form-group
+              label.col-md-1.control-label
+                span 是否支持积分抵扣
+              .col-md-6.col-lg-4
+                .col-md-3.checkbox.checkbox-m.checked.no-pl
+                  label
+                    i.iconfont.icon-checkbox
+                    input(type="checkbox" name="checkbox-radio" checked)
+                    | 是
+                .col-md-9.form-group
+                  label(class="col-sm-5 control-label") 积分抵扣上限
+                  .col-sm-7
+                    input(type="text" class="form-control" readonly)
+      .panel
+        .panel-heading 配置信息
+        .panel-body
+          form.form-horizontal
+            .form-group
+              label.col-md-1.control-label.required
+                span 年款 1
+              .col-md-6.col-lg-4
+                input.form-control(value="2017 年款")
+              .col-md-1
+                p.manage-tools
+                  span.text-muted
+                    i.iconfont.icon-delete
+            .form-group
+              label.col-md-1.control-label.text-muted
+                span 年款 2
+              .col-md-6.col-lg-4
+                input.form-control(value="2016 年款")
+              .col-md-1
+                p.manage-tools
+                  span.text-muted
+                    i.iconfont.icon-delete
+                  span.text-success
+                    i.iconfont.icon-increase
+            .form-group
+              label.col-md-1.control-label.required
+                span 动力 1
+              .col-md-6.col-lg-4
+                input.form-control(value="1.0T")
+              .col-md-1
+                p.manage-tools
+                  span.text-muted
+                    i.iconfont.icon-delete
+            .form-group
+              label.col-md-1.control-label.text-muted
+                span 动力 2
+              .col-md-6.col-lg-4
+                input.form-control(value="1.5T")
+              .col-md-1
+                p.manage-tools
+                  span.text-muted
+                    i.iconfont.icon-delete
+            .form-group
+              label.col-md-1.control-label.text-muted
+                span 动力 3
+              .col-md-6.col-lg-4
+                input.form-control
+              .col-md-1
+                p.manage-tools
+                  span.text-muted
+                    i.iconfont.icon-delete
+                  span.text-success
+                    i.iconfont.icon-increase
+            .form-group
+              label.col-md-1.control-label.required
+                span 配置 1
+              .col-md-6.col-lg-4
+                input.form-control
+              .col-md-1
+                p.manage-tools
+                  span.text-success
+                    i.iconfont.icon-increase
+            .form-group
+              label.col-md-1.control-label.required
+                span 颜色 1
+              .col-md-6.col-lg-4
+                input.form-control
+              .col-md-1
+                p.manage-tools
+                  span.text-muted
+                    i.iconfont.icon-delete
+            .row
+              .col-md-11.col-md-offset-1
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 左前45°
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 正前方
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 右前45°
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 右正侧面
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 正后方
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 颜色图标
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 360°看车
+            .form-group
+              label.col-md-1.control-label.text-muted
+                span 颜色 2
+              .col-md-6.col-lg-4
+                input.form-control
+              .col-md-1
+                p.manage-tools
+                  span.text-muted
+                    i.iconfont.icon-delete
+                  span.text-success
+                    i.iconfont.icon-increase
+            .row
+              .col-md-11.col-md-offset-1
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 左前45°
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 正前方
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 右前45°
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 右正侧面
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 正后方
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 颜色图标
+                .upload-inline-block
+                  .upload
+                    span.icon +
+                    span.text 上传图片
+                    input(type="file")
+                  p.text 360°看车
+      .panel
+        .panel-heading 亮点及参数设置
+        .panel-body
+          .tooltips
+            .btn-group
+              button.btn.active PC端
+              button.btn 移动端
+          form.form-horizontal
+            .form-group
+              label.col-md-1.control-label.required
+                span 车型亮点
+              .col-md-8.col-lg-8
+                textarea.form-control(rows="10" placeholder="富文本框（预留）")
+            .form-group
+              label.col-md-1.control-label.required
+                span 车型参数
+              .col-md-8.col-lg-8
+                textarea.form-control(rows="10" placeholder="富文本框（预留）")
+      .panel
+        .panel-heading 加价购及推荐设置
+        .panel-body
+          form.form-horizontal
+            .form-group
+              label.col-md-1.control-label.required
+                span 加价购
+              .col-md-8.col-lg-8
+                .upload-bar
+                  span.icon +
+                  span.text 选择商品
+                  input(type="file")
+            .form-group
+              label.col-md-1.control-label.required
+                span 推荐商品
+              .col-md-8.col-lg-8
+                .upload-bar
+                  span.icon +
+                  span.text 选择商品
+                  input(type="file")
+            .row
+              .col-md-11.col-md-offset-1
+                .preview
+                  img.pic(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113858bia7nmpog7cz53c7.jpg" alt="preview")
+                  p.name 隐藏式行车记录仪xxxxxxxxxxxxxxxx
+                  p.text
+                    span 368元
+                    del 680元
+                  .close
+                    i.iconfont.icon-Popupwindow-copy
+                .preview
+                  img.pic(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113858bia7nmpog7cz53c7.jpg" alt="preview")
+                  p.name 隐藏式行车记录仪
+                  p.text
+                    span 368元
+                    del 680元
+                  .close
+                    i.iconfont.icon-Popupwindow-copy
+                .preview
+                  img.pic(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113858bia7nmpog7cz53c7.jpg" alt="preview")
+                  p.name 隐藏式行车记录仪
+                  p.text
+                    span 368元
+                    del 680元
+                  .deleted
+                    p.deleted-text 该商品已下架
+                  .close
+                    i.iconfont.icon-Popupwindow-copy
+          .submit-bar
+            button.btn.btn-default.btn-big 取消
+            button.btn.btn-primary.btn-big 保存

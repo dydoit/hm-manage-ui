@@ -1,0 +1,157 @@
+[class*="col-"] {
+  &.form-group {
+    margin-bottom: 15px;
+  }
+}
+
+.no-mb {
+  margin-bottom: 0 !important;
+}
+
+.no-pl {
+  padding-left: 0;
+}
+
+.no-pr {
+  padding-right: 0;
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt--8 {
+  margin-top: -8px;
+}
+
+.manage-tools {
+  height: $input-height-base;
+  line-height: $input-height-base;
+
+  span {
+    margin-right: 16px;
+
+    &.text-muted {
+      color: #ddd;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  i {
+    font-size: 18px;
+  }
+
+  .form-block & {
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translate(0, -50%);
+  }
+}
+
+/////////////////////////////
+//
+// 商品编辑预览图片
+.preview-edit {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  margin-right: 35px;
+  margin-bottom: 35px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: bottom;
+
+  img.edit-picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  .close {
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 9px;
+    background-color: #bcbcbc;
+    color: #fff;
+    cursor: pointer;
+
+    i {
+      font-size: 8px;
+    }
+  }
+}
+
+.upload-inline-block {
+  display: inline-block;
+  margin-right: 35px;
+  margin-bottom: 35px;
+
+  p.text {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+}
+
+.checkbox-inline {
+  margin-right: 30px;
+}
+
+.form-block {
+  position: relative;
+  background-color: #f7f6f9;
+  border-radius: 4px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-bottom: 30px;
+}
+
+////////////////////////////////////////////////
+.btn-export {
+  width: 110px;
+}
+
+.search-qute {
+  form {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .form-group {
+      margin-right: 25px;
+      label {
+        margin-right: 10px;
+      }
+    }
+    .search {
+      .btn:first-child {
+        border: none;
+      }
+    }
+  }
+}
+
+/* 解决不可抗拒力导致的代码错乱 */
+.fake {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  .hr {
+    margin-bottom: 0;
+  }
+}

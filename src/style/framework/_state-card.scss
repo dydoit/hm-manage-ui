@@ -1,0 +1,42 @@
+ul.state-card {
+  li {
+    margin-bottom: 4px;
+    color: #aaa;
+
+    &.state {
+      position: relative;
+      font-size: 14px;
+      font-weight: 600;
+
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 7px;
+        height: 7px;
+        margin-left: -14px;
+        margin-top: 7px;
+        border-radius: 3.5px;
+      }
+    }
+  }
+}
+
+li.state,
+li.reason {
+  .state-success & {
+    color: #4fcd5c;
+
+    &:before {
+      background-color: #4fcd5c;
+    }
+  }
+
+  .state-danger & {
+    color: #f74158;
+
+    &:before {
+      background-color: #f74158;
+    }
+  }
+}

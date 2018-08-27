@@ -1,0 +1,68 @@
+//- 选择商品弹出框
+extends ../../layout/main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 确认弹出框
+
+block content
+  .mask
+    .dialog.dialog-list
+      .closed
+        a(href="javascript:;")
+          img(src="../../assets/images/close.png", alt="")
+        //- 选择商品
+      h4  选择商品
+      div.form-wrapper
+        form.form-inline(action="#")
+          .form-group
+            lable.control-label 商品类目
+            select.form-control.form-trade-1
+              option  请选择
+            select.form-control.form-trade-1
+              option  请选择
+          .form-group.ml30
+            lable.control-label.label-trade 商品名称
+            select.form-control.form-trade-2
+              option  请选择
+          .form-group
+            lable.control-label.label-trade 商品编号
+            select.form-control.form-trade-2
+              option  请选择
+          a(href="javascript:;" class="btn btn-primary btn-mid")  搜索
+      //- 商品列表
+      ul.trade-list
+        li
+          div
+            img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg")
+
+          p 隐藏式行车记录仪
+          p
+            strong  368元
+            del 680
+        li
+          div
+            img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg")
+
+          p 隐藏式行车记录仪
+          p
+            strong  368元
+            del 680
+        li
+          div
+            img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg")
+          p 隐藏式行车记录仪
+          p
+            strong  368元
+            del 680
+        li
+          div
+            img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg")
+          p 隐藏式行车记录仪
+          p
+            strong  368元
+            del 680
+      // 登录页码
+      include ../../component/page.pug

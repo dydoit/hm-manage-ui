@@ -1,0 +1,212 @@
+//- coupon.pug
+extends ../../layout/index-main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 优惠卷管理-优惠卷创建
+
+block content-body
+  .audit-detail
+    ol(class='breadcrumb')
+      li
+        a 首页
+      li
+        a 优惠卷管理
+      li.active
+        | 优惠卷创建
+    .panels
+      .panel
+        .panel-heading 基本信息
+        .panel-body
+          .row
+            .col-md-12
+              form.form-horizontal
+                .form-group
+                  label.col-md-1.control-label.required
+                    span 优惠卷标题
+                  .col-md-4
+                    input.form-control
+                    p.tip 标题字数限制1-20个汉字
+                .form-group
+                  label.col-md-1.control-label.required
+                    span 商品简述
+                  .col-md-4
+                    input.form-control
+                    p.tip 标题字数限制1-20个汉字
+                .form-group
+                  label.col-md-1.control-label.required
+                    span 优惠卷标题图
+                  .col-md-4
+                    .upload
+                      span.icon +
+                      span.text 上传图片
+                      input(type="file")
+                      p 标题图尺寸：472px * 472px；仅支持jpg,jpeg格式，且图片小于1M。
+                .form-group.has-feedback
+                  label.col-md-1.control-label.required
+                    span 优惠券领取有效时间（活动时间）
+                  .col-md-4
+                    input.form-control
+                    i.iconfont.icon-rili.form-control-feedback
+                .form-group.has-feedback
+                  label.col-md-1.control-label.required
+                    span 优惠券使用有效时间
+                  .col-md-4
+                    input.form-control
+                    i.iconfont.icon-rili.form-control-feedback
+                .form-group.has-feedback
+                  label.col-md-1.control-label.required
+                    span 下架时间
+                  .col-md-4
+                    input.form-control
+                    i.iconfont.icon-rili.form-control-feedback
+                .form-group.no-mb
+                  label.col-md-1.control-label.required
+                    span 优惠卷数量
+                  .col-md-4
+                    .col-md-3.radio.radio-m.checked.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 不限
+                .form-group.no-mb
+                  label.col-md-1.control-label
+                  .col-md-4
+                    .col-md-4.radio.radio-m.no-pl.no-pr
+                      label
+                        input(type="radio" name="test-radio")
+                        | 自定义数量
+                    .col-md-5.form-group
+                      input(type="number" class="form-control" value="1" readonly)
+                .form-group
+                  label.col-md-1.control-label.required
+                    span 优惠价格(元)
+                  .col-md-4
+                    input.form-control
+                .form-group
+                  label.col-md-1.control-label.required
+                    span 满减设置
+                  .col-md-6.col4lg-8
+                    .col-md-2.radio.radio-m.checked.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 不限
+                    .col-md-2.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 满500可用
+                    .col-md-2.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 满1000可用
+                    .col-md-2.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 满1000可用
+                    .col-md-2.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio")
+                        | 自定义价格
+                    .col-md-2.input-group
+                      input(type="number" class="form-control" value="1")
+                      span(class="input-group-addon") 元
+                .form-group
+                  label.col-md-1.control-label.required
+                    span 区域设置
+                  .col-md-9.mt-8
+                    .checkbox-inline.checkbox-m
+                      label
+                        i.iconfont.icon-checkbox
+                        input(type="checkbox" name="checkbox-radio" checked)
+                        | 全国
+                    button(type="button").btn.btn-default.btn-big.mt--8 + 添加地区
+                .form-group.no-mb
+                  label.col-md-1.control-label.required
+                    span 可用商品设置
+                  .col-md-6.mt-8
+                    .checkbox-inline.checkbox-m.checked
+                      label
+                        i.iconfont.icon-checkbox
+                        input(type="checkbox" name="checkbox-radio" checked)
+                        | 整车
+                .form-group
+                  label.col-md-1.control-label
+                  .col-md-4
+                    .col-md-2.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 不限
+                    .col-md-3.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio")
+                        | 自定义
+                    .col-md-4
+                      button(type="button").btn.btn-default.btn-big 点击选择
+                .form-group.no-mb
+                  label.col-md-1.control-label
+                  .col-md-4
+                    .checkbox-inline.checkbox-m
+                      label
+                        i.iconfont.icon-checkbox
+                        input(type="checkbox" name="checkbox-radio" checked)
+                        | 精品
+                .form-group
+                  label.col-md-1.control-label
+                  .col-md-4
+                    .col-md-2.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 不限
+                    .col-md-3.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio")
+                        | 自定义
+                    .col-md-4
+                      button(type="button").btn.btn-default.btn-big 点击选择
+                    .col-md-2
+                      p.help-block.hint
+                        | 已选择
+                        span 23
+                        | 个商品
+                .form-group.no-mb
+                  label.col-md-1.control-label
+                  .col-md-4
+                    .checkbox-inline.checkbox-m
+                      label
+                        i.iconfont.icon-checkbox
+                        input(type="checkbox" name="checkbox-radio" checked)
+                        | 精品
+                .form-group
+                  label.col-md-1.control-label
+                  .col-md-4
+                    .col-md-2.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 不限
+                    .col-md-3.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio")
+                        | 自定义
+                    .col-md-4
+                      button(type="button").btn.btn-default.btn-big 点击选择
+                .form-group
+                  label.col-md-1.control-label.required
+                    span 使用说明
+                  .col-md-8
+                    textarea.form-control(rows="10" placeholder="富文本框（预留）")
+                .form-group
+                  label.col-md-1.control-label.required
+                    span 是否置顶
+                  .col-md-4
+                    .col-md-2.radio.radio-m.checked.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 是
+                    .col-md-2.radio.radio-m.no-pl
+                      label
+                        input(type="radio" name="test-radio" checked)
+                        | 否
+          .submit-bar
+            button(type="button").btn.btn-default.btn-big 取消
+            button(type="button").btn.btn-primary.btn-big 创建

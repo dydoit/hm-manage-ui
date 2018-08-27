@@ -1,0 +1,62 @@
+//- audit.pug
+extends ../../../layout/index-main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 审核管理-资讯审核
+
+block content-body
+  .audit-detail
+    ol(class='breadcrumb')
+      li
+        a 首页
+      li
+        a 审批管理
+      li.active
+        | 审批详情
+    .panel
+      .panel-body.with-state
+        ul.state-card.state-danger
+          li.state 审核不通过
+          li.reason
+            span 原因：
+            span 图片不清晰
+          li.time
+            span 审核时间：
+            span 2017-10-24 12:30:40
+          li.admin
+            span 管理员：
+            span 彭于晏
+    .panel
+      .panel-heading 基本信息
+      .panel-body
+        form.form-horizontal
+          .form-group
+            label.col-md-1.control-label 咨询编号
+            .col-md-6.col-lg-4
+              input.form-control(value="1001234" readonly)
+          .form-group
+            label.col-md-1.control-label 经销商
+            .col-md-6.col-lg-4
+              input.form-control(value="北京捷亚泰汽车贸易有限公司" readonly)
+          .form-group
+            label.col-md-1.control-label 咨询标题
+            .col-md-6.col-lg-4
+              input.form-control(value="海马M6限时优惠1500元 欢迎试乘试驾" readonly)
+          .form-group
+            label.col-md-1.control-label 摘要
+            .col-md-6.col-lg-4
+              textarea.form-control(rows="3" readonly) 这个世界上有太多的界限需要被打破习惯独处一隅便没有办法去遇见不一样的自己青春就该去行走......
+          .form-group
+            label.col-md-1(for="dealer", class="control-label vm-label") 活动主图
+            .col-md-7.col-lg-5
+              img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg", class="form-control-static-img" alt="activity picture")
+          .form-group
+            label.col-md-1.control-label 咨询内容
+            .col-md-6.col-lg-4
+              textarea.form-control(rows="3" readonly) 这个世界上有太多的界限需要被打破习惯独处一隅便没有办法去遇见不一样的自己青春就该去行走......
+        .submit-bar
+          button.btn.btn-default.btn-big 审核不通过
+          button.btn.btn-primary.btn-big 审核通过

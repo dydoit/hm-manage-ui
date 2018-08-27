@@ -1,0 +1,66 @@
+//- audit.pug
+extends ../../../layout/index-main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 审核管理-二级网点审核
+
+block content-body
+  .audit-detail
+    ol(class='breadcrumb')
+      li
+        a 首页
+      li
+        a 审批管理
+      li.active
+        | 审批详情
+    .panel
+      .panel-body.with-state
+        ul.state-card.state-danger
+          li.state 审核不通过
+          li.reason
+            span 原因：
+            span 图片不清晰
+          li.time
+            span 审核时间：
+            span 2017-10-24 12:30:40
+          li.admin
+            span 管理员：
+            span 彭于晏
+    .panel
+      .panel-heading 基本信息
+      .panel-body
+        form.form-horizontal
+          .form-group
+            label.col-md-1.control-label 二级网点编号
+            .col-md-6.col-lg-4
+              input.form-control(value="S1001234" readonly)
+          .form-group
+            label.col-md-1.control-label 经销商
+            .col-md-6.col-lg-4
+              input.form-control(value="河南天时汽车销售有限公司" readonly)
+          .form-group
+            label.col-md-1.control-label 网点名称
+            .col-md-6.col-lg-4
+              input.form-control(value="河南天时—奇骏海马店" readonly)
+          .form-group
+            label.col-md-1(for="dealer", class="control-label vm-label") 网点图片
+            .col-md-7.col-lg-5
+              img(src="http://www.52guzhuang.com/data/attachment/forum/201708/29/113900shhy6eyph86e8tyv.jpg", class="form-control-static-img" alt="activity picture")
+          .form-group
+            label.col-md-1.control-label 联系电话
+            .col-md-6.col-lg-4
+              input.form-control(value="18379663522" readonly)
+          .form-group
+            label.col-md-1.control-label 店铺地址
+            .col-md-6.col-lg-4
+              input.form-control(value="河南省郑州市航海路321号" readonly)
+          .form-group
+            label.col-md-1.control-label 地址定位
+            .col-md-6.col-lg-4
+              input.form-control(value="经度：120°12′  维度：30°12′" readonly)
+        .submit-bar
+          button.btn.btn-default.btn-big 审核不通过
+          button.btn.btn-primary.btn-big 审核通过

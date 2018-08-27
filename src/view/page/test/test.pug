@@ -1,0 +1,76 @@
+//- test.pug
+extends ../../layout/index-main.pug
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 弹框模版页面
+
+block content-body
+  .mask
+    .dialog.dialog-list
+      .closed
+        a(href="javascript:;")
+          img(src="../../assets/images/close.png", alt="")
+        //- 待按钮的提示信息
+        //- p
+        //-   strong 您确定要删除该经销商吗
+        //- p 删除后将不能恢复
+        //- .select-group
+        //-   a(class="btn btn-default btn-mid",href="javascript:;") 取消
+        //-   a(class="btn btn-primary btn-mid",href="javascript:;") 确定
+      //- 没有按钮提示信息
+      //- .hint
+      //-   p
+      //-     strong  删除失败
+      //-   p 该角色下面还有用户，角色删除失败！
+      //------   权限分配树形菜单模版
+      h4  权限分配
+      ul
+        li
+          input(type="checkbox",id="index")
+          lable(for="index",class="iconfont icon-checkbox")
+          span  首页
+        li
+          dl.list
+            dt
+              input(type="checkbox",id="account")
+              lable(for="index",class="iconfont icon-checkbox")
+              span  账号管理
+            dd.list-group
+              div
+                dl.list
+                  dt
+                    input(type="checkbox",id="account")
+                    lable(for="index",class="iconfont icon-checkbox")
+                    span  角色管理
+                  dd.list-manage
+                    div
+                      div
+                        input(type="checkbox",id="account")
+                        lable(for="index",class="iconfont icon-checkbox")
+                        span  新增
+                        input(type="checkbox",id="account")
+                        lable(for="index",class="iconfont icon-checkbox")
+                        span  修改
+                      div
+                        input(type="checkbox",id="account")
+                        lable(for="index",class="iconfont icon-checkbox")
+                        span  删除
+                        input(type="checkbox",id="account")
+                        lable(for="index",class="iconfont icon-checkbox")
+                        span  分配权限
+
+            dd
+              div
+                input(type="checkbox",id="account")
+                lable(for="index",class="iconfont icon-checkbox")
+                span  用户管理
+        li
+          input(type="checkbox",id="index")
+          lable(for="index",class="iconfont icon-checkbox")
+          span  业务管理
+        li
+          input(type="checkbox",id="index")
+          lable(for="index",class="iconfont icon-checkbox")
+          span  资金管理

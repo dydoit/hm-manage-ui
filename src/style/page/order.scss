@@ -1,0 +1,107 @@
+.mt20 {
+    margin-top: 20px;
+}
+.w140 {
+    width: 140px; 
+}
+.tl {
+    text-align: left !important;
+}
+.order-table > tbody >tr >td{
+    width: 20%;
+}
+.order-vertical > tbody > tr > td {
+    padding: 14px 8px; 
+    width: 20%;
+}
+.order-vertical > tbody > tr > th {
+    padding: 14px 28px; 
+}
+.order-box {
+    border: 1px solid #eee;
+    height: 190px; 
+    .order-left {
+        width: 286px;
+        border-right: 1px solid #eee;
+        float: left;
+        .order-title {
+            font-size: 18px;
+            color: #FF7A00;
+            text-align: center;
+            padding-top: 38px;
+        }
+        .order-font-box {
+            font-size: 13px;
+            padding: 28px 54px 27px 49px;
+            line-height: 24px;
+            p {
+                width: 182px;  
+                color: #aaa;
+            } 
+        }
+    }
+    .order-right {
+        height: 150px;
+        min-width: 763px;
+        float: left;
+        overflow: auto;
+        margin:20px 0 20px 33px;
+        padding: 0 5px;
+    }
+}
+.order-btn {
+    text-align: center;
+    margin-top: 43px; 
+    button:last-child {
+        margin-left: 37px;
+    }
+}
+.tab-header {
+    li {
+        width: 17%;
+    }
+    .tab-width {
+        width: 40%;
+    }
+    .tab-info {
+        width: 17%;
+    }
+    .price {
+        width: 12%;
+    }
+    .after-sale {
+        width: 22%;
+    }
+    .operation {
+        width: 9%;
+    }
+}
+//表格宽度
+.table-view {
+    .table2 {
+        width: 40%; 
+    }
+    .table-info {
+        width: 17%;
+    }
+    .table-price {
+        width: 12%;
+    }
+    .after-sale {
+        width: 22%;
+    }
+    .operation {
+        width: 9%;
+    }
+}
+.order-table-header {
+    height: 40px;
+    line-height: 40px;
+    background: #f5f5f5;
+    font-weight: normal;
+    padding-left: 21px;
+    padding-right: 25px;
+}
+.order-padding {
+    padding: 10px;
+}

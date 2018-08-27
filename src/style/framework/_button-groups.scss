@@ -1,0 +1,30 @@
+.btn-group {
+  display: inline-block;
+  font-size: 0;
+  color: #aaa;
+  border-radius: 100px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .12);
+
+  .btn {
+    height: 30px;
+    width: 90px;
+    font-size: 13px;
+    border: none;
+    background: #fff;
+
+    &.active {
+      color: #ff8c00;
+    }
+
+    &:first-child {
+      border-top-left-radius: 100px;
+      border-bottom-left-radius: 100px;
+      border-right: 1px solid #ddd;
+    }
+
+    &:last-child {
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+    }
+  }
+}

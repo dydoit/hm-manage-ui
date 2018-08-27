@@ -1,0 +1,77 @@
+//导航栏
+.navitems {
+    background: $navitems-bg;
+    .nav-item {
+      position: relative;
+      float: left;
+      width: $navitems-width;
+      text-align: center;
+      font-size: $nav-font-size;
+      padding: $navitems-padding;
+      &:hover {
+        background-color: $navitems-active-bg;
+        &::before {
+          position: absolute;
+          left: 0;
+          top: 0px;
+          right: 0;
+          content: "";
+          border-top: $navitems-border-top;
+          display: block;
+        }
+        a {
+          color: $navitems-active-color;
+        }
+      }
+      a {
+        color: $navs-color-font;
+      }
+    }
+    .active {
+      background-color: $navitems-active-bg;
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        right: 0;
+        content: "";
+        border-top: $navitems-border-top;
+        display: block;
+      }
+      a {
+        color: $navitems-active-color;
+        display: block;
+      }
+    }
+  }
+  .nav-pills {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+      position: relative;
+      float: left;
+      padding: $nav-padding;
+      margin: $nav-margin; 
+      font-size: $nav-font-size; 
+      cursor: pointer;
+      &:hover {
+        background-color: $nav-bg;
+        border-radius: $nav-border-radius;
+        a {
+          color: $nav-color-font; 
+        }
+      }
+      a {
+        color: $navs-color-font;
+      }
+      &.active {
+        color: $nav-color-font;
+        background: $nav-bg;
+        border-radius: $nav-border-radius; 
+        a {
+          color: $nav-color-font; 
+        }
+      }
+    }
+  }

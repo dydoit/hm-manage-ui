@@ -1,0 +1,72 @@
+//- 树形弹出框
+extends ../../layout/main.pug
+
+append styles
+  link(rel="stylesheet", href="/css/site/site.css")
+
+block title
+  title 区域弹出框
+
+block content
+  .mask
+    .dialog.dialog-list
+      .closed
+        a(href="javascript:;")
+          img(src="../../assets/images/close.png", alt="")
+      h4  区域设置
+      div.tree-wrapper
+        dl
+          dt
+            div
+              input(type="checkbox")
+              label(class="iconfont icon-checkbox")
+              span  全国
+          dd
+            dl
+              dt
+                div
+                  input(type="checkbox")
+                  label(class="iconfont icon-checkbox")
+                  span  东北大区
+              dd
+                dl
+                  dt
+                    div
+                      input(type="checkbox")
+                      label(class="iconfont icon-checkbox")
+                      span  辽宁省
+                  dd
+                    ul
+                      li
+                        div
+                          input(type="checkbox")
+                          label(class="iconfont icon-checkbox")
+                          span  沈阳市
+                      li
+                        div
+                          input(type="checkbox")
+                          label(class="iconfont icon-checkbox")
+                          span  大连市
+                dl
+                  dt
+                    div
+                      input(type="checkbox")
+                      label(class="iconfont icon-checkbox")
+                      span  黑龙江省
+            dl
+              dt
+                div
+                  input(type="checkbox")
+                  label(class="iconfont icon-checkbox")
+                  span  华北大区
+
+
+
+
+
+
+
+
+
+
+
